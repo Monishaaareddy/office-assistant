@@ -18,9 +18,13 @@ env/
 .ipynb_checkpoints/
 
 # Generated vector stores
-vector_store/
+data/vector_store/
 *.faiss
 *.pkl
+
+# Runtime data
+data/conversation_history.db
+data/memory.json
 
 # IDE
 .vscode/

@@ -19,8 +19,8 @@ import pandas as pd
 # app deployment).
 DATA_DIR = os.environ.get(
     "OFFICE_DATA_DIR",
-    os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data"),
-)
+       os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "database"),
+    )
 
 _cache = {}
 

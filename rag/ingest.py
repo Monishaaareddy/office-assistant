@@ -1,7 +1,7 @@
-from loader import load_pdfs
-from chunker import chunk_documents
-from embeddings import create_embeddings
-from vector_store import create_vector_store
+from .loader import load_pdfs
+from .chunker import chunk_documents
+from .embeddings import create_embeddings
+from .vector_store import create_vector_store
 
 
 def ingest_documents():
