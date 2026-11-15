@@ -31,12 +31,12 @@ def _load_csv(filename: str) -> pd.DataFrame:
         path = os.path.join(DATA_DIR, filename)
         if not os.path.exists(path):
             raise FileNotFoundError(
-                f"Expected data file not found: {path}. "
-                f"Set the OFFICE_DATA_DIR environment variable if your CSVs live elsewhere."
+                f" Expected data file not found: {path}. "
+                f" Set the OFFICE_DATA_DIR environment variable if your CSVs live elsewhere."
             )
         df = pd.read_csv(path, dtype=str)  # read everything as string first, cast per-column below
         _cache[filename] = df
-    return _cache[filename].copy()
+    return _cache[filename].copy() 
 
 
 def get_employees_df() -> pd.DataFrame:

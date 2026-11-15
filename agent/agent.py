@@ -77,7 +77,23 @@ class OfficeAssistant:
 
         # Leave: action vs. balance query — mutually exclusive with each other
         leave_action = "leave" in q and any(
-            v in q for v in ["apply", "book", "take", "request", "need"]
+
+            v in q for v in [
+
+                "apply", "applied", "applying",
+
+                "book", "booked", "booking",
+
+                "take", "took", "taking",
+
+                "request", "requested", "requesting",
+
+                "need", "needed",
+
+                "avail", "availed", "availing",
+
+            ]
+
         )
         if leave_action:
             matched.append("apply_leave")
